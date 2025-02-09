@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Recipe App</title>
+</head>
+<body>
+   <div class="container">
+    <h2>Recipe Finder</h2>
+    <p>Search mouth watering recipe to satisfy your craving.</p>
+    <div class="searchBox">
+        <input type="text" id="searchInput" placeholder="Search for recipe...">
+        <button onclick="searchRecipes()">Search</button> 
+    </div>
+
+   
+
+    
+    <div class="currency-converter">
+        <select id="fromCurrency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="INR">INR</option>
+        </select>
+        <input type="number" id="amount" placeholder="Amount" value="1" min="0">
+        <select id="toCurrency">
+            <option value="EUR">EUR</option>
+            <option value="USD">USD</option>
+            <option value="GBP">GBP</option>
+            <option value="INR">INR</option>
+        </select>
+        <span id="result"></span>
+    </div>
+
+
+   </div>
+
+   <div class="recipes" id="recipes"></div>
+   <div class="notFound" id="notFound">Search your favorite recipes!</div>
+
+   <div class="popup-card" id="popupCard">
+    <button class="close-btn" onclick="closeRecipe()">Close</button>
+    <h3 id="recipeTitle"></h3>
+    <p  id="recipeDetails"></p>
+   </div>
+   <script src="script.js"></script>
+</body>
+</html>

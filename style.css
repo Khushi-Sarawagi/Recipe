@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    width: 100%;
+    min-width: 100vh;
+    background: black;
+    font-family: sans-serif;    
+}
+
+
+.container{
+    width: 100%;
+   background: url('food_Khana.jpg');
+   padding: 70px 20px;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   text-align: center;
+   color: #fff;
+}
+
+.container h2{
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.container p{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.searchBox{
+    max-width: 600px;
+    
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchBox input{
+    width: 70%;
+    padding: 12px;
+    border-radius: 5px 0 0 5px;
+    outline: 0;
+    border: 1px solid rgb(228, 69,69);
+    font-size: 1rem;
+   
+}
+
+.searchBox button{
+    
+    padding: 12px 20px;
+    outline: none;
+    border: 0;
+    background: rgb(240,72,72);
+    border: 1px solid rgb(221,59,59);
+   font-size: 1rem;
+   color: #fff;
+    font-weight: 600;
+    border-radius:0px 5px 5px 0px;
+    cursor: pointer;
+}
+
+.notFound{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px;
+    color: #ffffff;
+}
+.recipes{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:20px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.recipe-card{
+    width:200px;
+    
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top:30px ;
+    text-align: center;
+    position: relative;
+}
+
+.recipe-card img{
+    width:100%;
+    height: 120px;
+    border-radius:8px ;
+    margin-bottom: 10px;
+}
+
+.recipe-card button{
+    padding: 4px;
+    background: rgb(91,167,91);
+    color: #fff;
+    border-radius: 5px;
+border: 0;
+margin: 10px 0;
+}
+
+
+.popup-card{
+    background: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    height: 400px;
+   
+    z-index: 10;
+    border:2px solid red;
+    display: none;
+    /* overflow-y: auto; */
+
+}
+
+.popup-card h3{
+    margin: 12px 0;
+    color: #333;
+    font-size:22px;
+}
+.popup-card p{
+    margin: 12px 0;
+    color: #333;
+    font-size: 16px;
+    overflow-y: auto;
+    max-height: 280px;
+    padding-right: 10px;
+
+}
+
+.close-btn{
+    position: absolute;
+    top: 20px;
+    right:30px ;
+    background: rgb(235,103,103);
+    padding: 5px;
+    border: 0;
+    border-radius: 6px;
+    color: #fff;
+    font-weight:600 ;
+    cursor: pointer;
+}
+
+
+
+
+.currency-converter {
+    max-width: 600px;
+    margin: 30px auto 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.currency-converter select, 
+.currency-converter input {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(228, 69, 69);
+    outline: none;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.currency-converter select:hover,
+.currency-converter input:hover {
+    border-color: rgb(240, 72, 72);
+    box-shadow: 0 0 5px rgba(240, 72, 72, 0.3);
+}
+
+.currency-converter select:focus,
+.currency-converter input:focus {
+    border-color: rgb(240, 72, 72);
+    box-shadow: 0 0 8px rgba(240, 72, 72, 0.4);
+    background: white;
+}
+
+.currency-converter input {
+    width: 120px;
+    text-align: center;
+}
+
+#result {
+    color: white;
+    font-weight: 600;
+    min-width: 120px;
+    padding: 10px 15px;
+    background: rgba(240, 72, 72, 0.9);
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+    .currency-converter {
+        padding: 12px;
+        gap: 10px;
+    }
+    
+    .currency-converter select, 
+    .currency-converter input {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    #result {
+        min-width: 100px;
+        padding: 8px 12px;
+    }
+}
